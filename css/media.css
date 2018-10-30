@@ -1,0 +1,23 @@
+@media (min-width: 769px) {
+
+  .carousel-caption0 {
+    display: block !important;
+    width: 40%;
+  }
+}
+@media (max-width: 768px) {
+ 
+  .main-slider .carousel .carousel-inner .carousel-caption {
+    display: inline-block;
+    
+  }
+  .main-slider .carousel .carousel-inner .carousel-caption .cap-text h1 {
+      font-size: 35px
+  }
+  .main-slider .carousel .carousel-inner .carousel-caption .cap-text h3 {
+    font-size: 20px 
+  }
+  .carousel-caption0 {
+    display: block;
+  }
+}
