@@ -841,8 +841,15 @@ body {
 
 .down-app .all-content .down button {
   margin-left: 20px;
-  border: 1px solid #18c3b3;
   padding: 5px 20px;
+}
+
+.down-app .all-content .down button::before {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.32);
+  -o-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.32);
+  -ms-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.32);
 }
 
 /* end down-app */
