@@ -668,10 +668,10 @@ span {
     position: absolute;
     top: 0;
     left: 0;
-    background: radial-gradient($maincolor 60%, $maincolor2);
-    height: 100%;
+    background-image: linear-gradient(90deg, $maincolor2, $maincolor 20%);
+        height: 100%;
     width: 100%;
-    opacity: .4;
+    opacity: .8;
     -webkit-clip-path: polygon(100% 100%, 0 0, 0 100%);
     -moz-clip-path: polygon(100% 100%, 0 0, 0 100%);
     -o-clip-path: polygon(100% 100%, 0 0, 0 100%);
