@@ -663,20 +663,21 @@ span {
 /* start down-app */
 .down-app {
   position: relative;
+  color: #fff;
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    background-image: linear-gradient(90deg, $maincolor2, $maincolor 20%);
-        height: 100%;
+background: $maincolor2;
+    height: 100%;
     width: 100%;
     opacity: .8;
-    -webkit-clip-path: polygon(100% 100%, 0 0, 0 100%);
-    -moz-clip-path: polygon(100% 100%, 0 0, 0 100%);
-    -o-clip-path: polygon(100% 100%, 0 0, 0 100%);
-    -ms-clip-path: polygon(100% 100%, 0 0, 0 100%);
-    clip-path: polygon(100% 100%, 0 0, 0 100%);
+    -webkit-clip-path: polygon(100% -160%, 0 100%, 100% 100%);
+    -moz-clip-path: polygon(100% -160%, 0 100%, 100% 100%);
+    -o-clip-path: polygon(100% -160%, 0 100%, 100% 100%);
+    -ms-clip-path: polygon(100% -160%, 0 100%, 100% 100%);
+    clip-path: polygon(100% -160%, 0 100%, 100% 100%);
   }
   .all-content {
     .photo {
@@ -714,4 +715,147 @@ span {
 
 } 
 /* end down-app */ 
+/* start our price */ 
+/* start Pricing Packages */
+.our-pricing {
+  margin-top: 50px;
+  h3 {
+      text-align: center;
+      font-weight: bold;
+           padding-bottom: 15px
+  }
+  .par {
+      text-align: center;
+      position: relative;
+      margin-bottom: 100px;
+      &::after {
+          content: "";
+          position: absolute;
+          left: 48%;
+          bottom: -30px;
+          height: 3px;
+          width: 60px;
+          background: $maincolor2;
+          
+      }
+  }
+  .price {
+      
+      .price-container {
+          width: 270px;
+          padding-bottom: 40px;
+          @include bshadow(0 1px 11px 1px);
+          margin: 0 auto 40px auto;
+          @include bradius(20px);
+          overflow: hidden;    
+      @include tran(.3s);
+              &:hover {
+                  transform: translateY(-10px);
+                  -ms-transform: translateY(-10px);
+                  -webkit-transform: translateY(-10px);
+                  -o-transform: translateY(-10px);
+                  -moz-transform: translateY(-10px);
+                  @include bshadow(0 3px 14px 3px);
+
+              }
+          h6 {
+          background: $maincolor2;
+            color: #fff;
+            line-height: 70px;
+            height: 70px;
+          text-align: center;
+      }
+      .sallery {
+          color: $maincolor2;
+          text-align: center;
+          span {
+              font-size: 55px;
+              font-weight: bold;
+              sup {
+                  font-weight: bold;
+                  font-size: 20px;
+                  top: -35px
+              }
+          }
+          
+      }
+      ul {
+          list-style: none;
+          
+          li {
+          padding: 0 0px 20px 15px;
+      
+          i {
+              margin-right: 15px
+          }    
+          .not-available {
+              color: #c2c2c2
+          }
+          }
+      }
+      .custom-btn {
+          text-align: center;
+          padding: 10px 50px;
+          background: $maincolor2;
+          color: #fff;
+          text-decoration: none;
+          font-weight: 600;
+          border-radius: 20px;
+          display: block;
+  margin: 0 30px;
+      &::before {
+        background: $maincolor;
+      }
+          
+      }
+  }
+}
+}
+/* end Pricing Packages */
+/* end our price */ 
+/* start our team */
+.our-team {
+  margin: 50px 0;
+  h2 {
+    font-weight : bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .slick-active {
+    
+  }
+  .slick-slide img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    @include tran(0.6s);
+  }
+  .slick-slide {
+opacity: .3;
+text-align: center;
+@include tran(0.6s);
+
+h4 ,p {
+  opacity: 0;
+}
+h4 {
+  @include tran(0.3s);
+}
+p {
+  @include tran(0.6s);
+}
+  } 
+  .slick-current {
+    @include tran(0.6s);
+    opacity: 1;
+    h4 ,p {
+      opacity: 1;
+    }
+    img {
+      transform: rotate(360deg);
+    }
+  }
+} 
+/* end our team */ 
+
 
