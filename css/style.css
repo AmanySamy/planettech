@@ -882,7 +882,6 @@ body {
 }
 
 .our-pricing .price .price-container {
-  width: 270px;
   padding-bottom: 40px;
   box-shadow: 0 1px 11px 1px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 1px 11px 1px rgba(0, 0, 0, 0.4);
@@ -894,6 +893,7 @@ body {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  text-align: center;
   overflow: hidden;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -912,7 +912,7 @@ body {
   -moz-box-shadow: 0 3px 14px 3px rgba(0, 0, 0, 0.4);
 }
 
-.our-pricing .price .price-container h6 {
+.our-pricing .price .price-container h4 {
   background: #0ea6b1;
   color: #fff;
   line-height: 70px;
@@ -938,6 +938,7 @@ body {
 
 .our-pricing .price .price-container ul {
   list-style: none;
+  padding: 0;
 }
 
 .our-pricing .price .price-container ul li {
@@ -961,7 +962,7 @@ body {
   font-weight: 600;
   border-radius: 20px;
   display: block;
-  margin: 0 30px;
+  margin: 0 auto;
 }
 
 .our-pricing .price .price-container .custom-btn::before {
