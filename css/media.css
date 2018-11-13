@@ -22,12 +22,19 @@
   }
   .main-slider .carousel .carousel-inner .carousel-caption .cap-text h2 {
     font-size: 20px;
-    font-weight:  400;
+    font-weight:  bold;
     margin: 10px 0
   }
   .main-slider .carousel .carousel-inner .carousel-caption .cap-text h4 {
     font-size: 18px;
  
+  }
+  .down-app::before {
+    -webkit-clip-path: polygon(80% -160%, -25% 100%, 100% 100%);
+    -moz-clip-path: polygon(80% -160%, -25% 100%, 100% 100%);
+    -o-clip-path: polygon(80% -160%, -25% 100%, 100% 100%);
+    -ms-clip-path: polygon(80% -160%, -25% 100%, 100% 100%);
+    clip-path: polygon(80% -160%, -25% 100%, 100% 100%);
   }
   .down-app .all-content .content h2 {
     font-size: 20px;

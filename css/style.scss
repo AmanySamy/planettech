@@ -538,7 +538,6 @@ span {
         -o-background-clip: text;
         -moz-background-clip: text;
         -ms-background-clip: text;
-        text-fill-color: transparent;
         -webkit-text-fill-color: transparent;
         -o-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
@@ -820,9 +819,6 @@ background: $maincolor2;
     font-weight : bold;
     text-align: center;
     margin-bottom: 30px;
-  }
-  .slick-active {
-    
   }
   .slick-slide img {
     width: 100%;
