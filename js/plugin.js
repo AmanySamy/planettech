@@ -7,6 +7,7 @@ $(document).ready(function () {
         scrollspeed: 250
 
     });
+    
     $(document).scroll(function () {
         if ($(document).scrollTop() > 120) {
             $(".navbar .click").addClass("click-bg");
@@ -49,3 +50,23 @@ $(document).ready(function () {
         ]
     });
 });
+function openNav() {
+  var status = document.getElementById("toggle").checked,
+      menu = document.getElementById("sideNav"),
+      body = document.getElementsByTagName("body")[0];
+      
+  body.style.transition = "all .3s ease-in-out";
+  menu.style.transition = "all .3s ease-in-out";
+  if(!status){
+    menu.style.width = "250px";
+    menu.style.opacity= 1;
+    menu.style.height = "100%";
+    menu.style.borderRaduis = "0";
+    document.getElementsByTagName("body")[0].style.marginRight = "250px";
+    
+  }else{
+    menu.style.width = "0";
+    body.style.marginRight = "0";
+  }
+  
+}
