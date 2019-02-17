@@ -1,12 +1,5 @@
 $(document).ready(function () {
-    $("html").niceScroll({
-        cursorcolor: "#16cebb",
-        cursorwidth: "10px",
-        cursorborderradius: "5px",
-        zindex: "999999999",
-        scrollspeed: 250
 
-    });
     
     $(document).scroll(function () {
         if ($(document).scrollTop() > 120) {
