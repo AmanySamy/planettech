@@ -55,18 +55,21 @@ function openNav() {
       menu = document.getElementById("sideNav"),
       body = document.getElementsByTagName("body")[0];
       
-  body.style.transition = "all .3s ease-in-out";
-  menu.style.transition = "all .3s ease-in-out";
+  body.style.transition = "all .4s ease-in-out";
+  menu.style.transition = "all .1s ease-in-out";
   if(!status){
     menu.style.width = "250px";
     menu.style.opacity= 1;
     menu.style.height = "100%";
     menu.style.borderRaduis = "0";
-    document.getElementsByTagName("body")[0].style.marginRight = "250px";
+    // body.style.marginRight = "250px";
+    body.style.transform = "translateX(-250px)";
+    menu.style.transform = "translateX(250px)";
     
   }else{
     menu.style.width = "0";
-    body.style.marginRight = "0";
+    // body.style.marginRight = "0";
+    body.style.transform = "translateX(0)";
   }
   
 }
