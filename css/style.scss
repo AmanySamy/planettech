@@ -167,7 +167,7 @@ body {
     transition: all .1s ease-in-out;
     top: -20px;
     left: 20px;
-    z-index: 99;
+    z-index: 9999;
     background-image: url(../img/brand.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -251,7 +251,7 @@ body {
     position: absolute;
     right: 10px;
     top: 10px;
-    z-index: 99999;
+    z-index: 999;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -537,17 +537,15 @@ body {
 /* start do section */
 
 // Start About Section 
-<<<<<<< HEAD
 .about {
     padding-top: 50px;
     .about-row {
         align-items: center;
         .about-img {
-            margin-top: 20px;
             max-width: 100%;
         }
         .about-desc {
-            padding: 20px 0;
+            padding: 20px;
             line-height: 2;
             font-size: 1.25rem;
             font-weight: 300;
@@ -555,30 +553,11 @@ body {
         .custom-btn {
             margin: 0 40px;
         }
-=======
-.about{
-  padding:50px 0px;
-  .about-row{
-    align-items:center;
-    .about-img{
-        margin: 20px;
-        max-width: 100%;
-    }
-    .about-desc{
-      padding:20px 40px;
-      line-height:2;
-      font-size: 1.25rem;
-      font-weight: 300;
-    }
-    .custom-btn{
-      margin:0 40px;
->>>>>>> 8660a2976aa33b3e6b99bdf1685e5938c9ee81b2
     }
 }
 
 // End About Section 
 .do {
-<<<<<<< HEAD
     padding-top: 50px;
     background: url(http://www.questsolution.com/wp-content/uploads/2017/08/services-section-background.png) no-repeat;
     background-size: cover;
@@ -593,8 +572,6 @@ body {
         margin-bottom: 50px
     }
     .we-do {
-        margin: 5px;
-        padding: 20px 10px 5px 10px;
         position: relative;
         @include bradius(5px);
         cursor: pointer;
@@ -670,54 +647,6 @@ body {
             width: 0;
             transition-delay: .4s
         }
-=======
-    padding: 50px 0px;
-    background: url(http://www.questsolution.com/wp-content/uploads/2017/08/services-section-background.png) no-repeat;
-    background-size: cover;
-  .do-head {
-    font-weight: bold;
-    margin-bottom: 15px;
-    span {
-      color: $maincolor
-    }
-  }
-  .do-p {
-    margin-bottom: 50px
-  }
-  .we-do {
-    margin: 5px;
-    padding: 20px 10px 5px 10px;
-    position: relative;
-    @include bradius(20px);
-    cursor: pointer;
-    transition: all .4s ease-in-out;
-    margin-bottom: 30px;
-    .icon {
-      background: linear-gradient($maincolor, $maincolor2);
-      background: -o-linear-gradient($maincolor, $maincolor2);
-      background: -moz-linear-gradient($maincolor, $maincolor2);
-      background: -ms-linear-gradient($maincolor, $maincolor2);
-      display: block;
-      width: 120px;
-      height: 120px;
-      text-align: center;
-      @include bradius(50%);
-      margin: 0 auto 20px auto;
-      i {
-        font-size: 60px;
-        line-height: 120px;
-        background: #FFF;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -o-background-clip: text;
-        -moz-background-clip: text;
-        -ms-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -o-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-        -ms-text-fill-color: transparent;
-      }
->>>>>>> 8660a2976aa33b3e6b99bdf1685e5938c9ee81b2
     }
 }
 
@@ -954,9 +883,3 @@ body {
 
 
 /* end our price */
-
-
-/* start our team */
-
-
-/* end our team */

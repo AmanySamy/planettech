@@ -243,7 +243,7 @@ body::-webkit-scrollbar-track {
   transition: all .1s ease-in-out;
   top: -20px;
   left: 20px;
-  z-index: 99;
+  z-index: 9999;
   background-image: url(../img/brand.svg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -332,7 +332,7 @@ body::-webkit-scrollbar-track {
   position: absolute;
   right: 10px;
   top: 10px;
-  z-index: 99999;
+  z-index: 999;
   width: 40px;
   height: 40px;
   text-align: center;
@@ -635,11 +635,7 @@ body::-webkit-scrollbar-track {
 
 /* start do section */
 .about {
-<<<<<<< HEAD
   padding-top: 50px;
-=======
-  padding: 50px 0px;
->>>>>>> 8660a2976aa33b3e6b99bdf1685e5938c9ee81b2
 }
 
 .about .about-row {
@@ -649,12 +645,11 @@ body::-webkit-scrollbar-track {
 }
 
 .about .about-row .about-img {
-  margin-top: 20px;
   max-width: 100%;
 }
 
 .about .about-row .about-desc {
-  padding: 20px 0;
+  padding: 20px;
   line-height: 2;
   font-size: 1.25rem;
   font-weight: 300;
@@ -665,11 +660,7 @@ body::-webkit-scrollbar-track {
 }
 
 .do {
-<<<<<<< HEAD
   padding-top: 50px;
-=======
-  padding: 50px 0px;
->>>>>>> 8660a2976aa33b3e6b99bdf1685e5938c9ee81b2
   background: url(http://www.questsolution.com/wp-content/uploads/2017/08/services-section-background.png) no-repeat;
   background-size: cover;
 }
@@ -688,13 +679,11 @@ body::-webkit-scrollbar-track {
 }
 
 .do .we-do {
-  margin: 5px;
-  padding: 20px 10px 5px 10px;
   position: relative;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   cursor: pointer;
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
@@ -1031,6 +1020,4 @@ body::-webkit-scrollbar-track {
 
 /* end Pricing Packages */
 /* end our price */
-/* start our team */
-/* end our team */
 /*# sourceMappingURL=style.css.map */
