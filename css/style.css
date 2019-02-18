@@ -141,7 +141,8 @@ body::-webkit-scrollbar-track {
 }
 /* logo */
 #brand {
-  position: absolute;
+  position: fixed;
+  transition: all 0.1s ease-in-out;
   top: -20px;
   left: 20px;
   z-index: 9999;
@@ -523,17 +524,16 @@ body::-webkit-scrollbar-track {
 
 /* start do section */
 .about {
-  padding: 50px 0px;
+  padding-top: 50px;
 }
 .about .about-row {
   align-items: center;
 }
 .about .about-row .about-img {
-  margin: 20px;
   max-width: 100%;
 }
 .about .about-row .about-desc {
-  padding: 20px 40px;
+  padding: 20px;
   line-height: 2;
   font-size: 1.25rem;
   font-weight: 300;
@@ -543,7 +543,7 @@ body::-webkit-scrollbar-track {
 }
 
 .do {
-  padding: 50px 0px;
+  padding-top: 50px;
   background: url(http://www.questsolution.com/wp-content/uploads/2017/08/services-section-background.png) no-repeat;
   background-size: cover;
 }
@@ -558,13 +558,11 @@ body::-webkit-scrollbar-track {
   margin-bottom: 50px;
 }
 .do .we-do {
-  margin: 5px;
-  padding: 20px 10px 5px 10px;
   position: relative;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   margin-bottom: 30px;
@@ -604,7 +602,7 @@ body::-webkit-scrollbar-track {
   color: #11b0b1;
 }
 .do .we-do p {
-  color: #9e9c9c;
+  color: #6c6a6a;
   text-align: center;
 }
 .do .we-do .g-border {
@@ -944,11 +942,105 @@ body::-webkit-scrollbar-track {
 }
 .our-team .slick-current h4, .our-team .slick-current p {
   opacity: 1;
+  margin-top: 50px;
 }
-.our-team .slick-current img {
-  transform: rotate(360deg);
+.our-team .slick-current h4 h3, .our-team .slick-current p h3 {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 15px;
 }
-
-/* end our team */
+.our-team .slick-current h4 .par, .our-team .slick-current p .par {
+  text-align: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+.our-team .slick-current h4 .par::after, .our-team .slick-current p .par::after {
+  content: "";
+  position: absolute;
+  left: 48%;
+  bottom: -30px;
+  height: 3px;
+  width: 60px;
+  background: #0ea6b1;
+}
+.our-team .slick-current h4 .price .price-container, .our-team .slick-current p .price .price-container {
+  padding-bottom: 40px;
+  box-shadow: 0 1px 11px 1px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 1px 11px 1px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 1px 11px 1px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0 1px 11px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 1px 11px 1px rgba(0, 0, 0, 0.4);
+  margin: 0 auto 40px auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.our-team .slick-current h4 .price .price-container:hover, .our-team .slick-current p .price .price-container:hover {
+  transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  box-shadow: 0 3px 14px 3px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 3px 14px 3px rgba(0, 0, 0, 0.4);
+  -o-box-shadow: 0 3px 14px 3px rgba(0, 0, 0, 0.4);
+  -ms-box-shadow: 0 3px 14px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 3px 14px 3px rgba(0, 0, 0, 0.4);
+}
+.our-team .slick-current h4 .price .price-container h4, .our-team .slick-current p .price .price-container h4 {
+  background: #0ea6b1;
+  color: #fff;
+  line-height: 70px;
+  height: 70px;
+  text-align: center;
+}
+.our-team .slick-current h4 .price .price-container .sallery, .our-team .slick-current p .price .price-container .sallery {
+  color: #0ea6b1;
+  text-align: center;
+}
+.our-team .slick-current h4 .price .price-container .sallery span, .our-team .slick-current p .price .price-container .sallery span {
+  font-size: 55px;
+  font-weight: bold;
+}
+.our-team .slick-current h4 .price .price-container .sallery span sup, .our-team .slick-current p .price .price-container .sallery span sup {
+  font-weight: bold;
+  font-size: 20px;
+  top: -35px;
+}
+.our-team .slick-current h4 .price .price-container ul, .our-team .slick-current p .price .price-container ul {
+  list-style: none;
+  padding: 0;
+}
+.our-team .slick-current h4 .price .price-container ul li, .our-team .slick-current p .price .price-container ul li {
+  padding: 0 0px 20px 15px;
+}
+.our-team .slick-current h4 .price .price-container ul li i, .our-team .slick-current p .price .price-container ul li i {
+  margin-right: 15px;
+}
+.our-team .slick-current h4 .price .price-container ul li .not-available, .our-team .slick-current p .price .price-container ul li .not-available {
+  color: #c2c2c2;
+}
+.our-team .slick-current h4 .price .price-container .custom-btn, .our-team .slick-current p .price .price-container .custom-btn {
+  text-align: center;
+  padding: 10px 50px;
+  background: #0ea6b1;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
+}
+.our-team .slick-current h4 .price .price-container .custom-btn::before, .our-team .slick-current p .price .price-container .custom-btn::before {
+  background: #18c3b3;
+}
 
 /*# sourceMappingURL=style.css.map */
