@@ -16,31 +16,45 @@ $(document).ready(function () {
         event.preventDefault();
         $("html, body").animate({ scrollTop: $("#new").offset().top - 190 }, 1600);
     });
-    $('#our-team').slick({
-        centerMode: true,
-        centerPadding: '60px',
-        slidesToShow: 3,
-        autoPlay: true,
-        responsive: [
-          {
-            breakpoint: 768,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          },
-          {
-            breakpoint: 480,
-            settings: {
-              arrows: false,
-              centerMode: true,
-              centerPadding: '40px',
-              slidesToShow: 1
-            }
-          }
-        ]
+    // $('#our-team').slick({
+    //     centerMode: true,
+    //     centerPadding: '60px',
+    //     slidesToShow: 3,
+    //     autoPlay: true,
+    //     responsive: [
+    //       {
+    //         breakpoint: 768,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '40px',
+    //           slidesToShow: 1
+    //         }
+    //       },
+    //       {
+    //         breakpoint: 480,
+    //         settings: {
+    //           arrows: false,
+    //           centerMode: true,
+    //           centerPadding: '40px',
+    //           slidesToShow: 1
+    //         }
+    //       }
+    //     ]
+    // });
+
+    $('#our-team-slider .item').each(function(){
+      var next = $(this).next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+      next.children(':first-child').clone().appendTo($(this));
+      
+      if (next.next().length>0) {
+        next.next().children(':first-child').clone().appendTo($(this));
+      } else {
+        $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+      }
     });
 });
 function openNav() {
