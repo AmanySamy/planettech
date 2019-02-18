@@ -561,10 +561,10 @@ body::-webkit-scrollbar-track {
   margin: 5px;
   padding: 20px 10px 5px 10px;
   position: relative;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
   margin-bottom: 30px;
