@@ -534,7 +534,9 @@ span {
 }
 // End About Section 
 .do {
-  margin-top: 50px;
+    padding: 50px;
+    background: url(http://www.questsolution.com/wp-content/uploads/2017/08/services-section-background.png) no-repeat;
+    background-size: cover;
   .do-head {
     font-weight: bold;
     margin-bottom: 15px;
@@ -547,30 +549,27 @@ span {
   }
   .we-do {
     margin: 5px;
-    padding: 30px 10px 5px 10px;
+    padding: 20px 10px 5px 10px;
     position: relative;
-   @include bradius(5px);
+    @include bradius(5px);
     cursor: pointer;
-    background-image: linear-gradient(to bottom, $maincolor2, $maincolor);
- transition: all .4s ease-in-out;
- margin-bottom: 30px;
+    transition: all .4s ease-in-out;
+    margin-bottom: 30px;
     .icon {
-      background: #fff;
+      background: linear-gradient($maincolor, $maincolor2);
+      background: -o-linear-gradient($maincolor, $maincolor2);
+      background: -moz-linear-gradient($maincolor, $maincolor2);
+      background: -ms-linear-gradient($maincolor, $maincolor2);
       display: block;
-      width: 150px;
-      height: 150px;
+      width: 120px;
+      height: 120px;
       text-align: center;
-      @include bradius(15px);
+      @include bradius(50%);
       margin: 0 auto 20px auto;
-
       i {
-        font-size: 100px;
-        line-height: 150px;
-        background: linear-gradient($maincolor, $maincolor2);
-        background: -webkit-linear-gradient($maincolor, $maincolor2);
-        background: -o-linear-gradient($maincolor, $maincolor2);
-        background: -moz-linear-gradient($maincolor, $maincolor2);
-        background: -ms-linear-gradient($maincolor, $maincolor2);
+        font-size: 60px;
+        line-height: 120px;
+        background: #FFF;
         background-clip: text;
         -webkit-background-clip: text;
         -o-background-clip: text;
@@ -585,10 +584,10 @@ span {
     h3 {
       margin: 20px ;
       font-weight: 600;
-      color: #fff
+      color: #11b0b1;
     }
     p {
-      color: #fff;
+      color: #9e9c9c;
       text-align: center
     }
     .g-border {
@@ -644,7 +643,7 @@ span {
 }
 */
 .we-do:hover  {
-  background-image: linear-gradient(to top, $maincolor2, $maincolor);
+    // background-image: linear-gradient(to top, $maincolor2, $maincolor);
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.32);
     @include translat(0, -5px);
   }

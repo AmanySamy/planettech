@@ -543,7 +543,9 @@ body::-webkit-scrollbar-track {
 }
 
 .do {
-  margin-top: 50px;
+  padding: 50px;
+  background: url(http://www.questsolution.com/wp-content/uploads/2017/08/services-section-background.png) no-repeat;
+  background-size: cover;
 }
 .do .do-head {
   font-weight: bold;
@@ -557,37 +559,35 @@ body::-webkit-scrollbar-track {
 }
 .do .we-do {
   margin: 5px;
-  padding: 30px 10px 5px 10px;
+  padding: 20px 10px 5px 10px;
   position: relative;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   cursor: pointer;
-  background-image: linear-gradient(to bottom, #0ea6b1, #18c3b3);
   transition: all 0.4s ease-in-out;
   margin-bottom: 30px;
 }
 .do .we-do .icon {
-  background: #fff;
-  display: block;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  margin: 0 auto 20px auto;
-}
-.do .we-do .icon i {
-  font-size: 100px;
-  line-height: 150px;
   background: linear-gradient(#18c3b3, #0ea6b1);
-  background: -webkit-linear-gradient(#18c3b3, #0ea6b1);
   background: -o-linear-gradient(#18c3b3, #0ea6b1);
   background: -moz-linear-gradient(#18c3b3, #0ea6b1);
   background: -ms-linear-gradient(#18c3b3, #0ea6b1);
+  display: block;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 auto 20px auto;
+}
+.do .we-do .icon i {
+  font-size: 60px;
+  line-height: 120px;
+  background: #FFF;
   background-clip: text;
   -webkit-background-clip: text;
   -o-background-clip: text;
@@ -601,10 +601,10 @@ body::-webkit-scrollbar-track {
 .do .we-do h3 {
   margin: 20px;
   font-weight: 600;
-  color: #fff;
+  color: #11b0b1;
 }
 .do .we-do p {
-  color: #fff;
+  color: #9e9c9c;
   text-align: center;
 }
 .do .we-do .g-border {
@@ -654,7 +654,6 @@ body::-webkit-scrollbar-track {
 }
 */
 .we-do:hover {
-  background-image: linear-gradient(to top, #0ea6b1, #18c3b3);
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.32);
   transform: translate(0, -5px);
   -webkit-transform: translate(0, -5px);
