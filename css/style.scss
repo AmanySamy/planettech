@@ -889,159 +889,155 @@ body {
 /* end our price */ 
 /* start our team */
 .our-team {
-  margin: 50px 0;
-  h2 {
-    font-weight : bold;
-    text-align: center;
-    margin-bottom: 30px;
-  }
+    margin: 50px 0;
+    h2{
+        font-weight : bold;
+        text-align: center;
+        margin-bottom: 30px;
+    }
     #our-team-slider{
-        .carousel-inner{
-            > .item{
-              transition: 500ms ease-in-out left;
-            }
-            .active{
-              &.left{
-                left:-33%;
-              }
-              &.right{
-                left:33%;
-              }
-            }
-            .next{
-              left: 33%;
-            }
-            .prev{
-              left: -33%;
-            }
-            @media all and (transform-3d), (-webkit-transform-3d) {
-              > .item{
-                // use your favourite prefixer here
-                transition: 500ms ease-in-out left;
-                transition: 500ms ease-in-out all;
-                backface-visibility: visible;
-                transform: none!important;
-              }
-            }
-          }
-            .carouse-control{
-                &.left, &.right{
-                    background-image: none;
-                }
-          }
+        /* show 3 items */
+        .carousel-inner .active,
+        .carousel-inner .active + .carousel-item,
+        .carousel-inner .active + .carousel-item + .carousel-item,
+        .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item  {
+            display: block;
         }
-        .slick-slide img {
-            width: 100%;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            @include tran(0.6s);
+        
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+        .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+            transition: none;
         }
-        .slick-slide {
-            opacity: .3;
+        
+        .carousel-inner .carousel-item-next,
+        .carousel-inner .carousel-item-prev {
+          position: relative;
+          transform: translate3d(0, 0, 0);
+        }
+        
+        .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            top: 0;
+            right: -25%;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+        
+        /* left or forward direction */
+        .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+        .carousel-item-next.carousel-item-left + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+        .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(-100%, 0, 0);
+            visibility: visible;
+        }
+        
+        /* farthest right hidden item must be abso position for animations */
+        .carousel-inner .carousel-item-prev.carousel-item-right {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            display: block;
+            visibility: visible;
+        }
+        
+        /* right or prev direction */
+        .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+        .carousel-item-prev.carousel-item-right + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+        .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: relative;
+            transform: translate3d(100%, 0, 0);
+            visibility: visible;
+            display: block;
+            visibility: visible;
+        }
+    }
+}
+.our-pricing{
+    .par {
+        text-align: center;
+        position: relative;
+        margin-bottom: 100px;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 48%;
+            bottom: -30px;
+            height: 3px;
+            width: 60px;
+            background: $maincolor2;
+        }
+    }
+    .price {
+        .price-container {
+            padding-bottom: 40px;
+            @include bshadow(0 1px 11px 1px);
+            margin: 0 auto 40px auto;
+            @include bradius(20px);
             text-align: center;
-            @include tran(0.6s);
-
-            h4 ,p {
-              opacity: 0;
+            overflow: hidden;
+            @include tran(.3s);
+            &:hover {
+                transform: translateY(-10px);
+                -ms-transform: translateY(-10px);
+                -webkit-transform: translateY(-10px);
+                -o-transform: translateY(-10px);
+                -moz-transform: translateY(-10px);
+                @include bshadow(0 3px 14px 3px);
             }
             h4 {
-              @include tran(0.3s);
-            }
-            p {
-              @include tran(0.6s);
-            }
-          } 
-        .slick-current {
-            @include tran(0.6s);
-            opacity: 1;
-            h4 ,p {
-              opacity: 1;
-
-            margin-top: 50px;
-            h3 {
+                background: $maincolor2;
+                color: #fff;
+                line-height: 70px;
+                height: 70px;
                 text-align: center;
-                font-weight: bold;
-                padding-bottom: 15px
-
             }
-            .par {
+            .sallery {
+                color: $maincolor2;
                 text-align: center;
-                position: relative;
-                margin-bottom: 100px;
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 48%;
-                    bottom: -30px;
-                    height: 3px;
-                    width: 60px;
-                    background: $maincolor2;
+                span {
+                    font-size: 55px;
+                    font-weight: bold;
+                    sup {
+                        font-weight: bold;
+                        font-size: 20px;
+                        top: -35px
+                    }
                 }
             }
-            .price {
-                .price-container {
-                    padding-bottom: 40px;
-                    @include bshadow(0 1px 11px 1px);
-                    margin: 0 auto 40px auto;
-                    @include bradius(20px);
-                    text-align: center;
-                    overflow: hidden;
-                    @include tran(.3s);
-                    &:hover {
-                        transform: translateY(-10px);
-                        -ms-transform: translateY(-10px);
-                        -webkit-transform: translateY(-10px);
-                        -o-transform: translateY(-10px);
-                        -moz-transform: translateY(-10px);
-                        @include bshadow(0 3px 14px 3px);
+            ul {
+                list-style: none;
+                padding: 0;
+                li {
+                    padding: 0 0px 20px 15px;
+                    i {
+                        margin-right: 15px
                     }
-                    h4 {
-                        background: $maincolor2;
-                        color: #fff;
-                        line-height: 70px;
-                        height: 70px;
-                        text-align: center;
+                    .not-available {
+                        color: #c2c2c2
                     }
-                    .sallery {
-                        color: $maincolor2;
-                        text-align: center;
-                        span {
-                            font-size: 55px;
-                            font-weight: bold;
-                            sup {
-                                font-weight: bold;
-                                font-size: 20px;
-                                top: -35px
-                            }
-                        }
-                    }
-                    ul {
-                        list-style: none;
-                        padding: 0;
-                        li {
-                            padding: 0 0px 20px 15px;
-                            i {
-                                margin-right: 15px
-                            }
-                            .not-available {
-                                color: #c2c2c2
-                            }
-                        }
-                    }
-                    .custom-btn {
-                        text-align: center;
-                        padding: 10px 50px;
-                        background: $maincolor2;
-                        color: #fff;
-                        text-decoration: none;
-                        font-weight: 600;
-                        border-radius: 20px;
-                        display: block;
-                        margin: 0 auto;
-                        &::before {
-                            background: $maincolor;
-                        }
-                    }
+                }
+            }
+            .custom-btn {
+                text-align: center;
+                padding: 10px 50px;
+                background: $maincolor2;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 600;
+                border-radius: 20px;
+                display: block;
+                margin: 0 auto;
+                &::before {
+                    background: $maincolor;
                 }
             }
         }
