@@ -16,11 +16,11 @@ $(document).ready(function() {
         $("html, body").animate({ scrollTop: $("#new").offset().top - 190 }, 1600);
     });
 
-    $('#recipeCarousel').carousel({
+    $('#our-team-slider').carousel({
       interval: 10000
     })
 
-    $('.carousel .carousel-item').each(function(){
+    $('#our-team-slider .carousel-item').each(function(){
         var next = $(this).next();
         if (!next.length) {
         next = $(this).siblings(':first');
