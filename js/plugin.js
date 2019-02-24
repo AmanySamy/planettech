@@ -34,10 +34,43 @@ $(document).ready(function() {
             }
             
             next.children(':first-child').clone().appendTo($(this));
-          }
+        }
     });
 
 
+    // Testimonial Section
+    $('#testimonial-carousel').on('slid.bs.carousel',function(){
+        if($(this).find($("li.active")).attr('data-slide-to') == 0 ){
+            console.log($(this).find($("li.active")).attr('data-slide-to'));
+            $(this).find($('li.active')).attr("class"," ").addClass("active");
+            $(this).find($('li[data-slide-to= 1]')).attr("class"," ").addClass("next-active");
+            $(this).find($("li[data-slide-to=2]")).attr("class"," ").addClass("second-active");
+            $(this).find($("li[data-slide-to=3]")).attr("class"," ").addClass("prev-active");                              
+        }
+        else if($(this).find($("li.active")).attr('data-slide-to') == 1){
+            console.log($(this).find($("li.active")).attr('data-slide-to'));
+            $(this).find($('li.active')).attr("class"," ").addClass("active");
+            $(this).find($('li[data-slide-to= 2]')).attr("class"," ").addClass("next-active");
+            $(this).find($('li[data-slide-to= 3]')).attr("class"," ").addClass("second-active");
+            $(this).find($('li[data-slide-to= 0]')).attr("class"," ").addClass("prev-active");                              
+        }
+        else if($(this).find($("li.active")).attr('data-slide-to') == 2){
+            console.log($(this).find($("li.active")).attr('data-slide-to'));
+            $(this).find($('li.active')).attr("class"," ").addClass("active");
+            $(this).find($('li[data-slide-to= 3]')).attr("class"," ").addClass("next-active");
+            $(this).find($('li[data-slide-to= 0]')).attr("class"," ").addClass("second-active");
+            $(this).find($('li[data-slide-to= 1]')).attr("class"," ").addClass("prev-active");                              
+        }
+        else if($(this).find($("li.active")).attr('data-slide-to') == 3){
+            console.log($(this).find($("li.active")).attr('data-slide-to'));
+            $(this).find($('li.active')).attr("class"," ").addClass("active");
+            $(this).find($('li[data-slide-to= 0]')).attr("class"," ").addClass("next-active");
+            $(this).find($('li[data-slide-to= 1]')).attr("class"," ").addClass("second-active");
+            $(this).find($('li[data-slide-to= 2]')).attr("class"," ").addClass("prev-active");                              
+        }
+    });
+    
+    
     
 
 });

@@ -982,4 +982,127 @@ body::-webkit-scrollbar-track {
   background: #18c3b3;
 }
 
+.testimonials {
+  padding-top: 50px;
+}
+.testimonials .row {
+  background: #18c3b3;
+  margin: 80px 0;
+  color: #FFF;
+  align-items: center;
+  padding: 30px;
+}
+@media (max-width: 768px) {
+  .testimonials .row {
+    margin: 170px 0;
+  }
+  .testimonials .row .client-img {
+    margin-bottom: 196px;
+  }
+  .testimonials .row .client-text h2 {
+    text-align: center;
+  }
+}
+.testimonials .row .img-border {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  border-radius: 50%;
+  left: 50%;
+  border: 3px solid #EEE;
+}
+.testimonials .row .img-border .client1 {
+  width: 30px;
+  height: 30px;
+  background: #EEE;
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #18c3b3;
+  display: none;
+}
+.testimonials .row .img-border img {
+  border-radius: 50%;
+  max-width: 300px;
+  max-height: 300px;
+  width: 300px;
+  animation-name: scaleimg;
+  animation-duration: 0.3s;
+}
+.testimonials .row .client-text {
+  animation-name: scaleimg;
+  animation-duration: 0.3s;
+}
+.testimonials .row .client-text h2 {
+  font-weight: normal !important;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+.testimonials .carousel-indicators {
+  margin-right: 15%;
+  margin-left: 13.3%;
+  list-style: none;
+  border: 3px solid #EEE;
+  height: 360px;
+  width: 360px;
+  border-radius: 50%;
+  top: 0;
+}
+.testimonials .carousel-indicators li {
+  width: 30px;
+  height: 30px;
+  background: #EEE;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #18c3b3;
+}
+.testimonials .carousel-indicators li.active {
+  top: 50% !important;
+  left: 100% !important;
+  background: #18c3b3;
+  border: 1px solid #FFF;
+}
+.testimonials .carousel-indicators li.next-active {
+  top: 0%;
+  left: 50%;
+}
+.testimonials .carousel-indicators li.second-active {
+  top: 50%;
+  left: 0%;
+}
+.testimonials .carousel-indicators li.prev-active {
+  top: 100%;
+  left: 50%;
+}
+
+@keyframes rotateborder {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0.6;
+  }
+  180% {
+    transform: translate(-50%, -50%) rotate(270deg);
+    opacity: 1;
+  }
+}
+@keyframes scaleimg {
+  0% {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
