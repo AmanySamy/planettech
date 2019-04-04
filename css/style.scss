@@ -1104,20 +1104,105 @@ body {
 // End Testimonial
 
 
-@keyframes rotateborder {
-    0% {
-        transform: translate(-50%,-50%) rotate(0);
-        opacity: 1;
+// Start Footer
+.footer{
+    background: #EEE;
+    padding-top: 50px;
+    h2{
+        border-bottom: 1px solid rgba(14, 13, 13, 0.1);
+        padding-bottom: 18px !important;
     }
-    90% {
-        transform: translate(-50%,-50%) rotate(90deg);
-        opacity: 0.6;
+    #brand-footer {
+        transition: all .1s ease-in-out;
+        padding-bottom: 10px;
+        span {
+            font-size: 35px;
+            font-weight: bold;
+            color: $maincolor2
+        }
+        span:nth-of-type(2) {
+            color: $maincolor !important;
+            font-weight: 400
+        }
     }
-    180% {
-        transform: translate(-50%,-50%) rotate(270deg);
-        opacity: 1;
+    .social{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px !important;
+        padding-top: 15px;
+        li {
+            margin-right:10px;
+            .fab {
+                font-size: 22px;
+                // background: #18c3b3;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                color: #FFF;
+            }
+        }
+    }
+    .links{
+        line-height: 1.8;
+    }
+    .contact{
+        line-height:2;
+        li a{
+            color: #000;
+        }
+    }
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .btn.button_unique {
+            font-size: 14px;
+            padding: 0;
+            line-height: 40px;
+            background: #333;
+            color: #fff;
+            display: inline-block;
+            min-width: 120px;
+            text-align: center;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 0;
+            border-radius: 0 5px 5px 0;
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+        }
+        #newsletter-input-popup {
+            line-height: 40px;
+            width: 60%;
+            border: none;
+            background: #fff;
+            color: #666;
+            padding: 0 16px;
+            text-align: left;
+            font-weight: 400;
+            max-width: 100%;
+            font-size: 13px;
+            border-radius: 0px;
+            text-transform: none;
+        }
+    }
+    
+    .copyright{
+        background: #18c3b3;
+        color:#FFF;
+        margin-top:50px;
+        padding: 15px 0px;
+        text-align: center;
+        p{
+            margin-bottom: 0;
+        }
     }
 }
+// End Footer
 @keyframes scaleimg {
     0% {
         transform: scale(.7);
